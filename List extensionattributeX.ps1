@@ -7,5 +7,5 @@ $results = foreach ($ou in $ous) {
 $count = $results.Count
 Write-Host "$count users found"
 $results | Export-Csv -Path "C:\temp\output.csv" -NoTypeInformation
-Write-Host "Output has been exported to 'C:\Temp\Inactive Users 6m.csv'."
+Write-Host "Output has been exported to 'C:\Temp\Output.csv'."
 Read-Host -Prompt "Press Enter to exit"
