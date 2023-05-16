@@ -2,7 +2,7 @@
 $ous = "OU=Users1,DC=example,DC=com","OU=Users2,DC=example,DC=com" 
 
 $results = foreach ($ou in $ous) {
-    Get-ADUser -Filter * -SearchBase $ou -Properties extensionattribute8, LastLogonDate | Select-Object Name, CanonicalName, SamAccountName, extensionattribute8, LastLogonDate, Enabled, UserPrincipalName,DistinguishedName
+    Get-ADUser -Filter * -SearchBase $ou -Properties extensionattributeX, LastLogonDate | Select-Object Name, CanonicalName, SamAccountName, extensionattribute8, LastLogonDate, Enabled, UserPrincipalName,DistinguishedName
 }
 $count = $results.Count
 Write-Host "$count users found"
